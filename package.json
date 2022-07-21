@@ -1,0 +1,27 @@
+{
+  "name": "sense-wordcloud",
+  "version": "1.0.0",
+  "description": "wordcloud extension for qliksense.",
+  "scripts": {
+    "qext-scripts": "qext-scripts",
+    "watch-qext-scripts": "qext-scripts -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xunziheng/sense-wordcloud.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xunziheng/sense-wordcloud/issues"
+  },
+  "homepage": "https://github.com/xunziheng/sense-wordcloud#readme",
+  "devDependencies": {
+    "numeral": "^2.0.6",
+    "qext-scripts": "1.0.0-beta.3"
+  },
+  "dependencies": {
+    "js2wordcloud": "^1.1.12"
+  }
+}

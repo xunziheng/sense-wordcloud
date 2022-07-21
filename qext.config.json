@@ -1,0 +1,14 @@
+{
+  "extension": "Sense Wordcloud",
+  "mode": "compile",
+  "output": "./dist",
+  "compile": {
+    "entry": "./src/index.js",
+    "qext": "./src/index.qext",
+    "static": "./static"
+  },
+  "deploy": "desktop",
+  "desktopConfig": {
+    "destination": "D:\\_DATA\\Qlik\\Storage\\Sense\\Extensions"
+  }
+}

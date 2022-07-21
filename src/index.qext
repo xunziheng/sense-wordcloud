@@ -1,0 +1,15 @@
+{
+	"name": "Sense Wordcloud",
+	"description": "Chart visualization template",
+	"icon": "bar-chart-horizontal",
+	"type": "visualization",
+	"version": "1.0.0",
+	"author": "xunziheng",
+	"homepage": "https://github.com/xunziheng",
+	"keywords": "qlik-sense, visualization, wordcloud, chart",
+	"license": "",
+	"repository": "",
+	"dependencies": {
+		"qlik-sense": ">=3.0.x"
+	}
+}

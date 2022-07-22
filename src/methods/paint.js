@@ -21,22 +21,36 @@ export default function (qlik) {
         show: true,
         backgroundColor: 'rgba(0, 0, 0, 0.701961)',
         formatter: function(item) {
-          return `${dimensions[0].qFallbackTitle}: ${item[0]}; ${measures[0].qFallbackTitle}: ${item[1]}`;
+          return `
+            <div>${dimensions[0].qFallbackTitle}: ${item[0]}</div>
+            <div>${measures[0].qFallbackTitle}: ${item[1]}</div>
+          `;
         }
       },
       gridSize: Math.round(16 * $scope.$el.offsetWidth / 1024),
       weightFactor: function (size) {
         return Math.pow(size, 2.3) * $scope.$el.offsetWidth / 1024;
       },
-      rotateRatio: 0.75,
+      shrinkToFit: true,
+      drawOutOfBound: false,
+      drawMask: false, // debugger
+      wait: 30,
+      abortThreshold: 3000,
+      shuffle: true,
+      rotateRatio: 1,
+      shape: 'circle',
+      ellipticity: 1,
+      hover: (item, dimension, event) => {}
     });
     $scope.WordCloud.showLoading({
       backgroundColor: '#eeeeee',
       text: 'Loading...',
       effect: 'spin',
     })
-    $scope.WordCloud.setOption($scope.options);
-    $scope.WordCloud.hideLoading();
+    setTimeout(() => {
+      $scope.WordCloud.setOption($scope.options);
+      $scope.WordCloud.hideLoading();
+    }, 300);
   };
 }
 

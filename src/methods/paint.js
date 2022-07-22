@@ -1,5 +1,5 @@
 export default function (qlik) {
-  return function () {
+  return function ($element, layout) {
     const $scope = this.$scope;
     const table = qlik.table(this);
     const backendApi = this.backendApi;
@@ -16,9 +16,7 @@ export default function (qlik) {
     });
     Object.assign($scope.options, {
       list,
-      fontSizeFactor: 0.1,
-      maxFontSize: 60,
-      minFontSize: 12,
+      fontFamily: layout.font.fontFamily === 'default' ? undefined : layout.font.fontFamily,
       tooltip: {
         show: true,
         backgroundColor: 'rgba(0, 0, 0, 0.701961)',

@@ -17,6 +17,7 @@ export default function (qlik) {
     Object.assign($scope.options, {
       list,
       fontFamily: layout.font.fontFamily === 'default' ? undefined : layout.font.fontFamily,
+      backgroundColor: layout.background.backgroundColor.color,
       tooltip: {
         show: true,
         backgroundColor: 'rgba(0, 0, 0, 0.701961)',
@@ -40,7 +41,10 @@ export default function (qlik) {
       rotateRatio: 1,
       shape: 'circle',
       ellipticity: 1,
-      hover: (item, dimension, event) => {}
+      hover: (item, dimension, event) => {
+      },
+      click: (item, dimension, event) => {
+      },
     });
     $scope.WordCloud.showLoading({
       backgroundColor: '#eeeeee',

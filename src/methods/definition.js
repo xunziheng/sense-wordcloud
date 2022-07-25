@@ -34,6 +34,19 @@ export default {
               defaultValue: "default",
             },
           }
+        },
+        background: {
+          label: "Background",
+          type: "items",
+          items: {
+            backgroundColor: {
+              label: "Background Color",
+              component: "color-picker",
+              ref: "background.backgroundColor",
+              type: "object",
+              defaultValue: { index: -1, color: "#fff" }
+            },
+          }
         }
       }
     }

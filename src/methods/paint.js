@@ -17,7 +17,7 @@ export default function (qlik) {
     Object.assign($scope.options, {
       list,
       fontFamily: layout.font.fontFamily === 'default' ? undefined : layout.font.fontFamily,
-      backgroundColor: layout.background.backgroundColor.color,
+      backgroundColor: hexToRgba(layout.background.backgroundColor.color, layout.background.backgroundColorOpacity),
       tooltip: {
         show: true,
         backgroundColor: 'rgba(0, 0, 0, 0.701961)',
@@ -70,4 +70,15 @@ function wordCount(w, arr) {
     if (w === word) res = res + count;
   });
   return res;
+}
+
+/**
+ * sense color-picker hexToRgba
+ */
+function hexToRgba(hex, opacity) {
+  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return `rgba(${parseInt(result[1], 16)},${parseInt(
+    result[2],
+    16
+  )},${parseInt(result[3], 16)},${opacity})`;
 }

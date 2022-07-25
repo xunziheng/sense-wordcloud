@@ -46,6 +46,16 @@ export default {
               type: "object",
               defaultValue: { index: -1, color: "#fff" }
             },
+            backgroundColorOpacity: {
+              label: "Background Color Opacity",
+              type: "number",
+              component: "slider",
+              ref: "background.backgroundColorOpacity",
+              min: 0,
+              max: 1,
+              step: 0.01,
+              defaultValue: 1
+            },
           }
         }
       }
